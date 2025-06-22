@@ -1,0 +1,37 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "provider": {
+      "openrouter": {
+        "npm": "@openrouter/ai-sdk-provider",
+        "name": "OpenRouter",
+        "options": {},
+        "models": {
+          "anthropic/claude-3.5-sonnet": {
+            "name": "Claude 3.5 Sonnet"
+          },
+          "google/gemini-2.5-flash": {
+            "name": "Gemini 2.5 Flash"
+          },
+          "anthropic/claude-3.7-sonnet": {
+            "name": "Claude 3.7 Sonnet"
+          },
+          "anthropic/claude-4.0-sonnet": {
+            "name": "Claude 4.0 Sonnet"
+          },
+          "google/gemini-2.5-pro": {
+            "name": "Gemini 2.5 Pro"
+          }
+        }
+      }
+    },
+    "mcp": {
+      "exa": {
+        "type": "local",
+        "command": ["npx", "-y", "mcp-remote", "https://mcp.exa.ai/mcp?exaApiKey=798a4fb5-f456-4d19-814e-dbfc9943d33b"]
+      },
+      "container-use": {
+        "type": "local",
+        "command": ["cu", "stdio"]
+      }
+    }
+  }
